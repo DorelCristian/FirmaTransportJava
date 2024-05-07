@@ -1,0 +1,8 @@
+rootProject.name = 'FirmaTransport'
+include 'NormandiaClient'
+include 'NormandiaModel'
+include 'NormandiaNetworking'
+include 'NormandiaPersistence'
+include 'NormandiaServer'
+include 'NormandiaService'
+
