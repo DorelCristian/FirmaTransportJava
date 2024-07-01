@@ -44,15 +44,15 @@
             </Pane>
             <Pane prefHeight="200.0" prefWidth="200.0">
                <children>
-                  <TableView fx:id="tableViewCurse" layoutX="2.0" layoutY="15.0" onMouseClicked="#handleclick" prefHeight="169.0" prefWidth="594.0">
+                  <!-- <TableView fx:id="tableViewCurse" layoutX="2.0" layoutY="15.0" onMouseClicked="#handleclick" prefHeight="169.0" prefWidth="594.0">
                     <columns>
                       <TableColumn fx:id="ColoanaDestinatie" prefWidth="137.6000428199768" text="Destinatia" />
                       <TableColumn fx:id="ColoanaData" prefWidth="147.99993896484375" text="Data Plecarii" />
                         <TableColumn fx:id="ColoanaOra" prefWidth="150.4000244140625" text="Ora Plecarii" />
                         <TableColumn fx:id="ColoanaLocuri" prefWidth="165.59994506835938" text="Numar locuri disponibile" />
                     </columns>
-                  </TableView>
-                  <ListView fx:id="listViewRezervari" layoutX="2.0" layoutY="190.0" prefHeight="169.0" prefWidth="594.0" />
+                  </TableView>-->
+                  <ListView fx:id="listViewRezervari" layoutX="2.0" layoutY="15.0" prefHeight="169.0" prefWidth="594.0" />
                </children>
             </Pane>
          </children>

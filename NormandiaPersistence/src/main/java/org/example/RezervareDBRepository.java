@@ -87,7 +87,7 @@ public class RezervareDBRepository implements IRepository {
                     int id= result.getInt("id");
                     int id_client = result.getInt("id_client");
                     //Client client = ClientDBRepository.findbyId(id_client);
-                    User user = UserDBRepository.findbyId(id_client);
+                    User user = UserHibernateRepository.findbyId(id_client);
                     int id_cursa = result.getInt("id_cursa");
                     Cursa cursa = CursaDBRepository.findbyId(id_cursa);
                     int locuri = result.getInt("locuri");
@@ -128,7 +128,7 @@ public class RezervareDBRepository implements IRepository {
                     int id= result.getInt("id");
                     int id_client = result.getInt("id_client");
                     //Client client = ClientDBRepository.findbyId(id_client);
-                    User user1 = UserDBRepository.findbyId(id_client);
+                    User user1 = UserHibernateRepository.findbyId(id_client);
                     int id_cursa = result.getInt("id_cursa");
                     Cursa cursa1 = CursaDBRepository.findbyId(id_cursa);
                     int locuri1 = result.getInt("locuri");

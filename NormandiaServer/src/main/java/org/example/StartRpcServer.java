@@ -25,7 +25,7 @@ public class StartRpcServer {
 
 
 
-        UserDBRepository userRepository =  new UserDBRepository(properties);
+        UserHibernateRepository userRepository =  new UserHibernateRepository();
         ClientDBRepository clientDBRepository = new ClientDBRepository(properties);
         CursaDBRepository cursaDBRepository = new CursaDBRepository(properties);
         RezervareDBRepository rezervareDBRepository = new RezervareDBRepository(properties);
@@ -33,7 +33,8 @@ public class StartRpcServer {
         Service service = new Service(userRepository, clientDBRepository, cursaDBRepository, rezervareDBRepository, seatDBRepository);
 
        // System.out.println(properties);
-        //System.out.println(userRepository.findByUsername("ionel"));
+        System.out.println(userRepository.findByUsername("Ionel"));
+
 
         System.out.println("Starting server on port " + propertiesServer.getProperty("port"));
         var portInt = Integer.parseInt(propertiesServer.getProperty("port"));

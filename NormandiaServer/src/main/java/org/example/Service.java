@@ -3,6 +3,7 @@ package org.example;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -10,7 +11,7 @@ import java.util.concurrent.Executors;
 
 public class Service implements IRezervareServices {
 
-    private UserDBRepository userDBRepository;
+    private UserHibernateRepository userDBRepository;
 
     private ClientDBRepository clientDBRepository;
     private CursaDBRepository cursaDBRepository;
@@ -33,7 +34,7 @@ public class Service implements IRezervareServices {
 
     }*/
 
-    public Service(UserDBRepository userDBRepository, ClientDBRepository clientDBRepository, CursaDBRepository cursaDBRepository, RezervareDBRepository rezervareDBRepository, SeatDBRepository seatDBRepository) {
+    public Service(UserHibernateRepository userDBRepository, ClientDBRepository clientDBRepository, CursaDBRepository cursaDBRepository, RezervareDBRepository rezervareDBRepository, SeatDBRepository seatDBRepository) {
         this.userDBRepository = userDBRepository;
         this.clientDBRepository = clientDBRepository;
         this.cursaDBRepository = cursaDBRepository;
@@ -164,6 +165,13 @@ return seatDBRepository.findByRezervare(r);
 
     @Override
     public User connect(String username, String password, IRezervareObserver client) {
+        List<User>users=userDBRepository.findAll();
+        System.out.println("---");
+        for (User t:users) {
+            System.out.println(t.toString());
+        }
+
+        System.out.println("----===--");
         User user=userDBRepository.findByUsername(username);
         if (user!=null && user.getPassword().equals(password)) {
 
